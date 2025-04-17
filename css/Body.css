@@ -15,7 +15,7 @@
 main{
     width: 80%;
    margin: auto;
-    border: 1px solid;
+    
     padding: 20px;
 }
 section{
@@ -26,7 +26,7 @@ display: flex;
 }
 .section__form_left_side{
    
-    border: 1px solid;
+   
     height: 500px;
     margin-bottom: 50px;
     padding: 20;
@@ -98,8 +98,8 @@ display: flex;
     display: flex;
     flex-direction: row-reverse;
    
-      bottom: 10%;
-      left: 48%;
+      bottom: 0%;
+      left: 39%;
     }
     .dots{
      
