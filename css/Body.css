@@ -1,179 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+main {
+  width: 80%;
+  margin: auto;
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    
+  padding: 20px;
 }
-main{
-    width: 80%;
-   margin: auto;
-    
-    padding: 20px;
+section {
+  height: auto;
+  padding: 100px 0px;
+  transition: all 1s ease;
 }
-section{
-height: auto;
+.section__hiden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
-.section__form{
-display: flex;
+.section__form {
+  display: flex;
 }
-.section__form_left_side{
-   
-   
-    height: 500px;
-    margin-bottom: 50px;
-    padding: 20;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.section__form_left_side {
+  height: 500px;
+  margin-bottom: 50px;
+  padding: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.section__form_left_side h1{
-   
- font-size: 40px;
- font-weight: 600;
+.section__form_left_side h1 {
+  font-size: 40px;
+  font-weight: 600;
 }
-.section__form_left_side i{
-   
+.section__form_left_side i {
   font-size: 30px;
- }
+}
 /*SLIDER--------------------------------*/
-.slider{
-        
+.slider {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+.sliderDiv {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+
+  transition: all 2s ease;
+  padding: 50px;
+}
+.sliderDiv div {
+  display: flex;
+}
+.sliderDiv div h6 {
+  text-align: center;
+
+  padding: 0 10px;
+  align-content: center;
+}
+
+.img_user_slider {
+  width: 15%;
+
+  border-radius: 50%;
+}
+.social_slider {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+.social_slider i {
+  padding: 2px;
+  font-size: 20px;
+}
+.btnLeft {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #504954;
+  cursor: pointer;
+}
+.btnLeft i,
+.btnRight i {
+  color: white;
+}
+.btnRight {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #504954;
+}
+.dotsContainer {
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+
+  bottom: 0%;
+  left: 39%;
+}
+.dots {
+  border: none;
+  border-radius: 50%;
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  z-index: 10;
+  cursor: pointer;
+}
+.dots_active {
+  background-color: #504954;
+  transition: all 2s ease;
+}
+
+/*TABS -------------------------------------------*/
+.operations {
+  padding: 20px;
+}
+.operations__tabs {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.operations__tabs button {
+  padding: 5 20px;
+  margin: 0 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  background: transparent;
+  transition: all 0.5s ease;
+}
+.selected__tab {
+  transform: translateY(-10px);
+}
+.operations__contents {
+  height: 300px;
+}
+
+.modal {
+  padding: 20px;
+  height: 200px;
+  display: none;
+  width: 100%;
+}
+.modal_active {
+  display: flex;
+
+  border: 1px solid black;
+  padding: 20px;
+  height: 200px;
+
+  width: 100%;
+}
+
+@media screen and (max-width: 860px) {
+  .section__form_left_side h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .slider {
     position: relative;
-     width: 100%;
-      height: 60vh;
-   overflow: hidden;
-  
- 
-      
-    }
-    .sliderDiv{
-      position: absolute;
-      width: 100%;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-   text-align: center;
-      height: auto;
-   
-      transition: all 2s ease;
-      padding: 50px;
-      
-    }
-    .sliderDiv div{
-  
-      display: flex;
-    }
-    .sliderDiv div h6{
-      text-align: center;
-     
-    padding: 0 10px;
-      align-content: center;
-    }
-   
-    .img_user_slider{
-      width: 15%;
-    
-      border-radius: 50%;
-    }
-    .social_slider{
-      display: flex;
-      align-items: center;
-      padding: 4px;
-    }
-    .social_slider i{
-    
-      padding: 2px;
-      font-size: 20px;
-    }
-    .btnLeft{
-      position: absolute;
-     top: 35%;
-      left: 0; 
-      border: 1px solid;
-      border-radius: 50%;
-      padding: 10px;
-      background-color: #504954;
-      cursor: pointer;
-    }
-    .btnLeft i,.btnRight i{
-      color: white;
-    }
-    .btnRight{
-      position: absolute;
-     top: 35%;
-      right:0; 
-      border: 1px solid;
-      border-radius: 50%;
-      padding: 10px;
-      cursor: pointer;
-      background-color: #504954;
-      
-    }
-    .dotsContainer{
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+  }
+
+  .dotsContainer {
     position: absolute;
-      width: auto;
-      height: auto;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row-reverse;
-   
-      bottom: 0%;
-      left: 39%;
-    }
-    .dots{
-     
-     border: none;
-      border-radius: 50%;
-      margin: 5px;
-      width: 15px;
-      height: 15px;
-      z-index: 10;
-      cursor: pointer;
-      
-    }
-    .dots_active{
-      background-color: #504954;
-      transition: all 2s ease;
-    }
 
-    @media screen and (max-width:860px) {
-      .section__form_left_side  h1{
-        font-size: 40px;
-        font-weight: 600;
-      }
-      .slider{
-        
-        position: relative;
-         width: 100%;
-          height: 20vh;
-       overflow: hidden;
- 
-     
-          
-        }
+    bottom: 10%;
+    left: 30%;
+  }
 
-
-
-
-
-
-
-      .dotsContainer{
-        position: absolute;
-          width: auto;
-          height: auto;
-        display: flex;
-        flex-direction: row-reverse;
-       
-          bottom: 10%;
-          left: 30%;
-        }
-    }
+  /*MODALSS*/
+  .operations__tabs button {
+    padding: 5 20px;
+    margin: 0 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    background: transparent;
+  }
+}

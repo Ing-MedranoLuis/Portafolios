@@ -1,3 +1,95 @@
+'use strict'
+
+
+
+
+//SECTIONS SREVEALING
+const sections = document.querySelectorAll('section')
+
+const observeSections = (entry) => {
+  const [entries] = entry;
+
+  if (entries.isIntersecting) {
+    entries.target.classList.remove('section__hiden')
+    console.log(entry)
+  }
+
+
+
+
+}
+
+
+
+const observerSection = new IntersectionObserver(observeSections, {
+  root: null,
+  threshold: 0.2
+})
+
+sections.forEach(e => {
+
+
+  observerSection.observe(e);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MODALES---------------- */
+const tabs_container = document.querySelector('.operations');
+const btn_tabs = document.querySelectorAll('.operations__btn');
+const operations__contents_modal = document.querySelectorAll('.modal');
+
+
+tabs_container.addEventListener('click', (e) => {
+
+  const click = e.target.closest('.operations__btn');
+
+  if (!click) return;
+
+
+
+
+  btn_tabs.forEach(e => e.classList.remove('selected__tab'))
+  click.classList.add('selected__tab');
+
+
+  operations__contents_modal.forEach(e => e.classList.remove('modal_active'))
+  document.querySelector(`.operations__contents_modal-${click.dataset.tab}`).classList.add('modal_active');
+})
+
+
+
+
+
 
 /*SLIDER CODE----------------------------------------------------- */
 
@@ -6,24 +98,24 @@ let btnLeft = document.querySelector(".btnLeft");
 let btnRight = document.querySelector(".btnRight");
 let dotsContainer = document.querySelector(".dotsContainer");
 
-const form=document.getElementById('form');
+const form = document.getElementById('form');
 
 
 let currSlide = 0;
 
 
 const dataText = [
-{ userName: 'Luis', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'este es my comentario' },
-{ userName: 'Alex', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'tu comentario' }
+  { userName: 'Luis', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'este es my comentario' },
+  { userName: 'Alex', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'tu comentario' }
 
 
 ];
-localStorage.setItem('data',JSON.stringify(dataText))
+localStorage.setItem('data', JSON.stringify(dataText))
 
 
 
-const renderData=()=>{
-  let dataFromLocal=JSON.parse(localStorage.getItem('data'))
+const renderData = () => {
+  let dataFromLocal = JSON.parse(localStorage.getItem('data'))
   console.log(dataFromLocal)
   dataFromLocal.forEach((e, i) => {
 
@@ -44,21 +136,21 @@ const renderData=()=>{
 }
 
 
-form.addEventListener('submit',(e)=>{
-   
-    e.preventDefault();
-    const data=new FormData(e.target)
-    const dataObject=Object.fromEntries(data)
-  
-   const existingData= JSON.parse(localStorage.getItem('data'))  ;
-   existingData.push(dataObject);
-   localStorage.setItem('data', JSON.stringify(existingData));
-   e.target.userName.value='';
-   e.target.email.value='';
-   e.target.phoneNumber.value='';
-   e.target.comment.value='';
-   location.reload();
-   renderData()
+form.addEventListener('submit', (e) => {
+
+  e.preventDefault();
+  const data = new FormData(e.target)
+  const dataObject = Object.fromEntries(data)
+
+  const existingData = JSON.parse(localStorage.getItem('data'));
+  existingData.push(dataObject);
+  localStorage.setItem('data', JSON.stringify(existingData));
+  e.target.userName.value = '';
+  e.target.email.value = '';
+  e.target.phoneNumber.value = '';
+  e.target.comment.value = '';
+  location.reload();
+  renderData()
 })
 renderData()
 
