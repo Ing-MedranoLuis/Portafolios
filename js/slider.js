@@ -18,6 +18,7 @@ const dataText = [
 
 
 ];
+localStorage.setItem('data',JSON.stringify(dataText))
 
 
 
