@@ -19,7 +19,7 @@ main{
     padding: 20px;
 }
 section{
-height: 100vh;
+height: auto;
 }
 .section__form{
 display: flex;
@@ -51,10 +51,11 @@ display: flex;
      width: 100%;
       height: 60vh;
    overflow: hidden;
+  
  
       
     }
-    .slider div{
+    .sliderDiv{
       position: absolute;
       width: 100%;
       margin: auto;
@@ -62,10 +63,36 @@ display: flex;
       flex-direction: column;
    text-align: center;
       height: auto;
-    
+   
       transition: all 2s ease;
       padding: 50px;
       
+    }
+    .sliderDiv div{
+  
+      display: flex;
+    }
+    .sliderDiv div h6{
+      text-align: center;
+     
+    padding: 0 10px;
+      align-content: center;
+    }
+   
+    .img_user_slider{
+      width: 15%;
+    
+      border-radius: 50%;
+    }
+    .social_slider{
+      display: flex;
+      align-items: center;
+      padding: 4px;
+    }
+    .social_slider i{
+    
+      padding: 2px;
+      font-size: 20px;
     }
     .btnLeft{
       position: absolute;
@@ -122,4 +149,31 @@ display: flex;
         font-size: 40px;
         font-weight: 600;
       }
+      .slider{
+        
+        position: relative;
+         width: 100%;
+          height: 20vh;
+       overflow: hidden;
+ 
+     
+          
+        }
+
+
+
+
+
+
+
+      .dotsContainer{
+        position: absolute;
+          width: auto;
+          height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+       
+          bottom: 10%;
+          left: 30%;
+        }
     }
