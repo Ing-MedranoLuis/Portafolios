@@ -299,7 +299,7 @@ justify-content: center;
              .header_content div{
                 display: flex;
                 flex-direction: column;
-                border: 1px solid;
+                
                 height: 50%;
              }
              .header_content div p{
@@ -308,14 +308,14 @@ justify-content: center;
                 
                }
              .header_content div h1{
-                font-size: 10px;
+                font-size: 20px;
                 position: absolute;
-                top: 350px;
+                top: 400px;
                 left: 40%;
              }
              .header_content div a{
                position: absolute;
-               top: 350px;
+               top: 450px;
                 left: 25%;
                 border-radius: 5px;
                  width: 49%;
