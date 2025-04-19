@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@font-face {
+  font-family: "anthonio";
+  src: url(/fonts/AnthonioScript.ttf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -145,17 +149,22 @@ section {
   justify-content: center;
 }
 .operations__tabs button {
-  padding: 5 20px;
+  padding: 5 30px;
   margin: 0 20px;
   border: 1px solid black;
   border-radius: 10px;
   color: black;
   background: transparent;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
+
 .selected__tab {
   transform: translateY(-10px);
+  background-color: black;
+  color: white;
 }
+
 .operations__contents {
   height: 300px;
 }
@@ -169,11 +178,50 @@ section {
 .modal_active {
   display: flex;
 
-  border: 1px solid black;
   padding: 20px;
   height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   width: 100%;
+}
+.modal_active i {
+  font-size: 80px;
+}
+.modal_active p {
+  padding: 0 5px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "anthonio";
+}
+.modal_active a {
+  border: 1px solid;
+  border-radius: 10px;
+
+  padding: 3 50px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 2s ease;
+}
+
+.modal_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  transition: all 2s ease;
+}
+.hidden {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  animation: arrowanimation 3s linear infinite;
+}
+.chartOne {
+  width: 300px;
+  height: auto;
 }
 
 @media screen and (max-width: 860px) {
@@ -198,10 +246,36 @@ section {
     bottom: 10%;
     left: 30%;
   }
+  /*ARROW COMENT FORM*/
+  .class_comment {
+    position: relative;
+  }
+  .hidden {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    animation: arrowanimation 3s linear infinite;
+  }
+  @keyframes arrowanimation {
+    0% {
+      transform: translateY(30px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(30px);
+    }
+  }
+  .hidden i {
+    font-size: 100px;
+    font-weight: 700;
+  }
 
   /*MODALSS*/
   .operations__tabs button {
-    padding: 5 20px;
+    padding: 5 10px;
     margin: 0 5px;
     border: 1px solid black;
     border-radius: 10px;

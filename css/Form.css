@@ -1,58 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
-.box{
-    margin: 0px;
-    position: relative;
-    background-color: #504954;
-    width: 100%;
-    height: 420px;
-    overflow: hidden;
- 
+.box {
+  margin: 0px;
+  position: relative;
+  background-color: aliceblue;
+  width: 70%;
+  height: 420px;
+  overflow: hidden;
 }
-.box::before{
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-   padding: 10;
-    width: 380px;
-height:400px;
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  padding: 10;
+  width: 380px;
+  height: 400px;
 
-background:linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
-z-index: 1;
-transform-origin: bottom right;
-animation: animate 3s linear infinite;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #000000,
+    #45f3ff,
+    #45f3ff
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 3s linear infinite;
 }
 @keyframes animate {
-    0%{
-        transform: rotate(0deg);
-    }
-   100%{
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.box form{
+.box form {
   position: absolute;
-   
-    inset: 4px;
-   
-    width: 98%;
-    height:98%;
-   
-    z-index: 2;
-    background-color:#504954 ;
+
+  inset: 4px;
+
+  width: 98%;
+  height: 98%;
+
+  z-index: 2;
+  background-color: aliceblue;
 }
 
 .inputBox {
@@ -62,44 +66,63 @@ animation: animate 3s linear infinite;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-
 }
 .inputBox input {
   width: 100%;
   margin: auto;
   padding: 10px;
-  border: 1px solid rgb(72, 126, 134);
+  border: 1px solid black;
   outline: none;
   background: transparent;
+  color: rgb(0, 0, 0);
+}
+.inputBox label {
+  position: absolute;
+  top: 5;
+  padding: 0 8;
+  margin: 0 10;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  background-color: aliceblue;
+  color: black;
+  opacity: 0;
+}
+.inputBox input:focus + label,
+.inputBox input:not(:placeholder-shown) + label {
+  top: -15;
+  opacity: 1;
+  font-size: 0.7rem;
+}
+.inputBox textarea {
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  height: 120px;
+  outline: none;
+}
+#btnSubmit {
+  padding: 10;
+  border: none;
+  background-color: rgb(0, 0, 0);
   color: white;
+}
+@media screen and (max-width: 860px) {
+  .box {
+    margin: 0px;
+    position: relative;
+    background-color: aliceblue;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+  }
+  .box form {
+    position: absolute;
 
-}
-.inputBox label{
-position: absolute;
-top: 5;
-padding: 0 8;
-margin: 0 10;
-pointer-events: none;
-transition: all 0.5s ease;
-background-color: #504954;
-color: rgb(72, 126, 134);
-opacity: 0;
-}
-.inputBox input:focus +label,
-.inputBox input:not(:placeholder-shown) + label{
-    top: -15;
-    opacity: 1;
-    font-size: 0.7rem;
-}
-.inputBox textarea{
-    background-color: transparent;
-    border: 1px solid rgb(72, 126, 134);
-    height: 120px;
-}
-#btnSubmit{
+    inset: 4px;
 
-    padding: 10;
-    border: none;
-    background-color:rgb(72, 126, 134);
-    color: white;
+    width: 97%;
+    height: 98%;
+
+    z-index: 2;
+    background-color: aliceblue;
+  }
 }

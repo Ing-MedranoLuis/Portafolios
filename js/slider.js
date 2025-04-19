@@ -11,7 +11,7 @@ const observeSections = (entry) => {
 
   if (entries.isIntersecting) {
     entries.target.classList.remove('section__hiden')
-    console.log(entry)
+
   }
 
 

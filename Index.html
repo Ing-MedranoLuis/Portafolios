@@ -21,11 +21,11 @@
       </div>
 
       <nav>
-        <ul>
-          <li class=" active__a active"><a><i class="fa-solid fa-house"></i> Home</a></li>
-          <li class="active__a" id="courses"><a><i class="fa-solid fa-circle-question"></i> Course</a></li>
-          <li class="active__a"><a><i class="fa-solid fa-user"></i> About</a></li>
-          <li class="active__a"><a><i class="fa-solid fa-address-book"></i> Contact</a></li>
+        <ul class="nav_container_a">
+          <li class="active__a active" data-sec="1"><a><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="active__a " data-sec="2"><a><i class="fa-solid fa-house"></i> Course</a></li>
+          <li class="active__a" data-sec="3"><a><i class="fa-solid fa-user"></i> About</a></li>
+          <li class="active__a" data-sec="4"><a><i class="fa-solid fa-address-book"></i> Contact</a></li>
         </ul>
       </nav>
       <div class="search__bar">
@@ -36,7 +36,7 @@
           <li><a><i class="fa-brands fa-facebook"></i></a></li>
           <li><a><i class="fa-brands fa-instagram"></i></a></li>
           <li><a><i class="fa-brands fa-whatsapp"></i></a></li>
-
+          <li><a href="https://github.com/Ing-MedranoLuis"><i class="fa-brands fa-github"></i></a></li>
         </ul>
       </div>
 
@@ -54,7 +54,7 @@
       </div>
   </header>
   <main>
-    <section class="course section__hiden ">
+    <section class="course section__hiden section-1 ">
       <div class="slider">
 
 
@@ -66,9 +66,9 @@
 
         </span>
       </div>
-    </section class=" section__form">
-    <section class="about section__hiden ">
-      <div class="row">
+    </section class=" section__form ">
+    <section class="about section__hiden section-2">
+      <div class="row class_comment">
         <div class="col-md-6 col-12  section__form_left_side">
           <h1>Comentarios</h1>
           <p><i class="fa-solid fa-quote-left"></i>
@@ -76,6 +76,9 @@
             algun contacto como email o usuario
 
           </p>
+        </div>
+        <div class="arrow hidden">
+          <i class="fa-solid fa-arrow-down"></i>
         </div>
         <div class="col-md-6 col-12 ">
           <div class=" box">
@@ -109,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section section__hiden>
+    <section class="section__hiden section-3">
       <div class="operations">
         <div class="operations__tabs">
           <button class="operations__btn selected__tab" data-tab="1">Correos</button>
@@ -119,13 +122,37 @@
       </div>
       <div class="operations__contents">
         <div class="operations__contents_modal-1 modal modal_active">
-          MODAL1
+          <div class="modal_container">
+            <i class="fa-solid fa-envelope"></i>
+            <p>
+              Get ready with yours emails
+            </p>
+          </div>
+          <div>
+
+            <a class="cover_btn">Enviar</a>
+          </div>
         </div>
         <div class="operations__contents_modal-2 modal">
-          MODAL2
+          <div class="modal_container">
+            <div class="col-sm-12 chartOne ">
+
+              <canvas id="dashboard"></canvas>
+            </div>
+          </div>
+
         </div>
         <div class="operations__contents_modal-3 modal">
-          MODAL3
+          <div class="modal_container">
+            <i class="fa-solid fa-envelope"></i>
+            <p>
+              Get ready with yours emails
+            </p>
+          </div>
+          <div>
+
+            <a class="cover_btn">Enviar</a>
+          </div>
         </div>
 
       </div>
@@ -137,12 +164,14 @@
 
 
   </main>
-  <footer>
+  <footer class="section-4">
 
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="/js/nav.js"></script>
   <script src="/js/slider.js"></script>
   <script src="/js/form.js"></script>
+  <script src="/js/dashboard.js"></script>
 </body>
 
 </html>
