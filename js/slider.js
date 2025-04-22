@@ -37,8 +37,36 @@ sections.forEach(e => {
 
 
 
+//modal
+const btnModal = document.getElementById('bth_learn_more');
+const modal_window = document.querySelector('.modal_window_cv')
+const btn_close_modal = document.getElementById('btn_close_modal');
+const overlay_div = document.querySelector('.overlay_div')
 
 
+btnModal.addEventListener('click', (e) => {
+
+  modal_window.classList.remove('hiddenModal')
+  modal_window.classList.add('div__modal')
+  overlay_div.classList.add('overlay')
+})
+btn_close_modal.addEventListener('click', () => {
+
+  modal_window.classList.add('hiddenModal')
+  overlay_div.classList.remove('overlay')
+})
+
+document.addEventListener('keyup', (e) => {
+
+
+  modal_window.classList.add('hiddenModal')
+  overlay_div.classList.remove('overlay')
+
+})
+overlay_div.addEventListener('click', () => {
+  modal_window.classList.add('hiddenModal')
+  overlay_div.classList.remove('overlay')
+})
 
 
 
@@ -105,8 +133,8 @@ let currSlide = 0;
 
 
 const dataText = [
-  { userName: 'Luis', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'este es my comentario' },
-  { userName: 'Alex', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'tu comentario' }
+  { userName: 'Luis', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'I do appreciate @Alexa, this is the thing that I like the most ', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPq_GdHrAfGdnr3cLDeagSc7X_twjR_6Cz9Q&s' },
+  { userName: 'Alexa', phoneNumber: '8294890965', email: 'luis@gmail.com', comment: 'Gracias por tus aportes, this is one of the coolest that I\'ve reach before', img: 'https://cdn3.pixelcut.app/7/18/profile_photo_maker_hero_100866f715.jpg' }
 
 
 ];
