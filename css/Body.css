@@ -55,13 +55,12 @@ section {
   height: 500px;
   background-color: rgb(255, 255, 255);
   border: none;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px;
+  box-shadow: 0px 0px 30px -10px;
   top: 20%;
   left: 35%;
   z-index: 7;
   transform: translateY(-20px);
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
   position: fixed;
 }
 .hiddenModal {
@@ -275,7 +274,7 @@ section {
   padding: 10px;
   transition: all 2s ease;
 }
-.hidden {
+.arrow {
   display: none;
   position: absolute;
   top: 40%;
@@ -288,18 +287,25 @@ section {
   width: 300px;
   height: auto;
 }
+.class_comment {
+  display: flex;
+}
 
 @media screen and (max-width: 860px) {
   .div__modal {
     position: absolute;
 
-    width: 80%;
+    width: 90%;
     margin: auto;
     height: 400px;
+
     background-color: rgb(255, 255, 255);
     border: none;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px 0px;
+    box-shadow: 0px 0px 30px -10px;
+    top: 20%;
+    left: 35%;
+    z-index: 7;
+
     top: 20%;
     left: 20px;
     z-index: 7;
@@ -356,9 +362,12 @@ section {
   /*ARROW COMENT FORM*/
   .class_comment {
     position: relative;
-  }
-  .hidden {
     display: flex;
+    flex-direction: column;
+  }
+
+  .arrow {
+    display: block;
     position: absolute;
     top: 40%;
     left: 33%;
