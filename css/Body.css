@@ -74,6 +74,27 @@ section {
   padding: 10 10;
   opacity: 1;
 }
+.cv__modal {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.cv_icon {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  padding: 10px 0px;
+}
+.cv_icon img {
+  width: 50%;
+  border: 1px solid;
+}
+.btn_modal_cv {
+  border: 1px solid;
+  padding: 10px 5px;
+  text-align: center;
+  cursor: pointer;
+}
 .div_header_modal a {
   display: flex;
   justify-content: end;
@@ -274,6 +295,7 @@ section {
   padding: 10px;
   transition: all 2s ease;
 }
+
 .arrow {
   display: none;
   position: absolute;

@@ -16,11 +16,12 @@ nav_a.forEach(el => {
 
 btn__toggle.addEventListener("click", (e) => {
   nav__container.classList.toggle("nav__container__remover");
+
 });
 
 
 
-
+btn__toggle.classList.add("hidden");
 
 
 const getSectionClicked = (sections) => {
